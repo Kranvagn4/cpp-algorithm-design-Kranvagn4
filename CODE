@@ -1,0 +1,33 @@
+CODE:
+
+#include <iostream>
+#include<vector>
+
+using namespace std;
+
+int main(){
+    int systemnum;
+    cin>> systemnum;
+    vector<vector<int>> arr1;
+    while (systemnum--){
+        int eqn_num;
+        cin>> eqn_num;
+        int coeff_num;
+        cin>> coeff_num;
+
+        for (int n=0; n<coeff_num; n++){
+            for(int m=0; m<coeff_num; m++){
+                int coeff;
+                cin>>coeff;
+                arr1[m].push_back(coeff);
+            }
+        }
+        for (vector<int> row : arr1) {
+            for (int value : row) {
+                cout << value;
+            }
+        }
+    }
+
+return 0;
+}
